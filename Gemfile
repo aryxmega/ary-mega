@@ -1,5 +1,5 @@
-source 'http://rubygems.org'
-
+source 'https://rubygems.org'
+gem "bundler"
 gem "jekyll"
-gem "jekyll-paginate"
-gem "support-for"
+gem "jekyll-sitemap"
+gem 'jekyll-tagging'
