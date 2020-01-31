@@ -1,8 +1,6 @@
 /* Author */
 .author {
-  margin: 80px 0;
-  padding-bottom: 70px;
-  border-bottom: 1px dashed #ddd;
+  margin: 80px 0 0;
   @media (max-width: $mobile) {
     margin: 50px 0;
     padding-bottom: 50px;
@@ -34,12 +32,10 @@
 }
 
 .author__bio {
-  max-width: 450px;
-  margin: 0 auto 30px;
-  font-size: 16px;
-  line-height: 27px;
-  text-align: center;
-  color: $gray-medium;
+  font-size: 20px;
+  line-height: 1.6;
+  color: $gray-dark;
+  font-family: $sans-serif;
 }
 
 .author__more {

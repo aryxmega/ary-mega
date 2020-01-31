@@ -1,17 +1,17 @@
-title: '@AWWWRY'
+title: 'ARY.'
 logo:  # you can add own logo.
 description: American-Indonesian father, fiancé, product designer and front-end developer from Los Angeles, California.
 keywords: Ary Mega, American-Indonesian, Balinese, Product Designer, UX Designer, Front-End Engineer, Web Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://awwwry.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://arymega.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Author Settings
 author:
-  name: '@AWWWRY'
+  name: 'ARY.'
   image: https://media.giphy.com/media/5n067EUZwH8cvtRfGz/giphy.gif
-  job: Just your typical Balinese web designer and developer who listens to country music in a Ford F-150.
-  bio: American-Indonesian father, fiancé, product designer and front-end developer from Los Angeles, California.
+  job: I'm Ary.
+  bio: An American-Indonesian father, fiancé, product designer and front-end developer from Los Angeles, California 🤙
   email: arymega@gmail.com
 
 
@@ -36,7 +36,7 @@ disqus-identifier: # add your shortname for Disqus Comment. For example mr-brown
 
 
 # Google Analytics
-google-analytics: UA-64088985-1 # add your identifier. For example UA-99631805-1.
+google-analytics: # add your identifier. For example UA-99631805-1.
 
 
 # Build settings
