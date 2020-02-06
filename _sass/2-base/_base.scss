@@ -5,8 +5,8 @@
 body {
   font-family: $sans-serif;
   font-size: 16px;
-  color: $dark;
-  background-color: #fff;
+  color: $white;
+  background-color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   input, textarea {
@@ -112,11 +112,11 @@ a {
     text-decoration: underline;
     text-underline-position: under;
     color: $primary-color;
-    transition: color 200ms;
+    transition: color 500ms;
     font-weight: 700;
 
     &:hover {
-        color: $dark;
+        color: $white;
     }
 }
 
