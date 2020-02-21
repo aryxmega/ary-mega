@@ -24,7 +24,7 @@
   font-family: $monospace;
   font-size: 12px;
   text-transform: uppercase;
-  color: $gray;
+  color: $black;
   letter-spacing: 1px;
 }
 
@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
   background-color: $gray-white;
   box-shadow: 0 10px 20px -4px rgba(30,28,122,0.3);
-  border: 20px solid $gray-white;
+  // border: 20px solid $gray-white;
   &:after {
     content: '';
     display: table;
@@ -55,6 +55,7 @@
       color: $white;
       padding: 2px 8px;
       border-radius: 4px;
+      font-size: 14px;
     }
     img {
       margin: 0 0 15px;
@@ -78,13 +79,9 @@
       border-radius: 4px;
     }
     &::before {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23EF3340' d='M3.8 10.8l7-7L12.3 5l-7.1 7z'/%3E%3Cpath fill='%23EF3340' d='M5.2 3.8l7 7-1.4 1.5-7-7z'/%3E%3C/svg%3E");
-      content: "";
-      width: 15px;
-      height: 15px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
+      content: '—';
+      color: $dark;
+      padding-right: 10px;
     }
   }
 
@@ -290,7 +287,8 @@
 
 /* Post Share */
 .post__share {
-  margin-bottom: 60px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .share__item {
@@ -299,15 +297,15 @@
 }
 
 .share__link svg {
-  width: 21px;
-  height: 21px;
-  fill: $gray-lighten;
+  width: 24px;
+  height: 24px;
+  fill: $blue-medium;
   transition: fill 200ms;
 }
 
 .share__link:hover {
   svg {
-    fill: $dark;
+    fill: $gray-lighten;
   }
 }
 

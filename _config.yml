@@ -1,42 +1,44 @@
-title: 'ARY.'
-logo:  # you can add own logo.
-description: American-Indonesian father, fiancé, product designer and front-end developer from Los Angeles, California.
-keywords: Ary Mega, American-Indonesian, Balinese, Product Designer, UX Designer, Front-End Engineer, Web Developer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://arymega.com" # the base hostname & protocol for your site, e.g. http://example.com
+title: 'Ary Mega'
+logo: 
+description: "I'm Ary, an American-Indonesian father, fiancé, product designer and front-end developer from Los Angeles, California."
+keywords:
+baseurl: ""
+url: "https://arymega.com"
 
 
-# Author Settings
-author:
-  name: 'ARY.'
+# Siteheader Settings
+siteheader:
+  name: 'Ary Mega'
   image: https://media.giphy.com/media/5n067EUZwH8cvtRfGz/giphy.gif
-  job: I'm Ary.
-  bio: An American-Indonesian father, fiancé, product designer and front-end developer from Los Angeles, California 🤙
-  email: arymega@gmail.com
+  title: "👋 I'm Ary."
+  slogan: "An American-Indonesian father, fiancé, product designer and front-end web developer from Los Angeles, California. If you need to holler, you can <a href='https://www.google.com/search?sxsrf=ALeKk00JrX_sOee4LZVBN-29IALbSc2zLQ%3A1582267624362&source=hp&ei=6HxPXoDVEpba-gStoYyQBA&q=%40awwwry&oq=%40awwwry&gs_l=psy-ab.3..35i39.294.1364..1526...1.0..0.162.717.5j2......0....1..gws-wiz.......0j0i131j0i30j0i10i30j0i5i10i30.04UbNZaqF0E&ved=0ahUKEwiA6b6dhuLnAhUWrZ4KHa0QA0IQ4dUDCAc&uact=5' target='_blank'>find me all over the internet.</a>"
+  email:
 
 
 # Contact links
 contact:
   - name: GitHub
-    link: https://github.com/awwwry
+    link: 
   - name: Instagram
-    link: https://instagram.com/awwwry
+    link: 
   - name: LinkedIn
-    link: https://linkedin.com/in/awwwry
+    link: 
+  - name: Merch
+    link: 
   - name: Reddit
-    link: https://reddit.com/u/awwwry
+    link: 
   - name: Spotify
-    link: https://open.spotify.com/playlist/0hvGuO3GFmX3zNWxaK17sZ
+    link: 
   - name: Twitter
-    link: https://twitter.com/awwwry
+    link: 
 
 
 # Comment Section (Disqus)
-disqus-identifier: # add your shortname for Disqus Comment. For example mr-brown
+disqus-identifier:
 
 
 # Google Analytics
-google-analytics: # add your identifier. For example UA-99631805-1.
+google-analytics:
 
 
 # Build settings
@@ -67,7 +69,7 @@ sass:
   sourcemap: never
 
 
-# Exclude from processing.
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock

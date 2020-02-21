@@ -3,13 +3,28 @@ layout: default
 ---
 
 <div class="container">
-  <section class="author" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
-    <div class="author__inner">
-      <h1 class="author__job">{{ site.author.job }}</h1>
-      <p class="author__bio">{{ site.author.bio }}</p>
-      <div class="author__more">
-        <a href="https://awwwry.com" class="say-hello">Visit my blog</a>
-      </div>
+  <section class="siteheader" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+    <div class="siteheader__inner">
+      <h1 class="siteheader__title"><a href="{{ site.url }}" title="Home">{{ site.siteheader.title }}</a></h1>
+      <p class="siteheader__slogan">{{ site.siteheader.slogan }}</p>
     </div>
   </section>
 </div>
+
+<div class="container">
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  <div class="confession" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
+    <div class="confession__content">
+      <div class="confession__meta">
+        <span class="confession__date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
+      </div>
+      <h2 class="confession__title">{{ post.title }}</h2>
+      <img src="{{ post.image }}" alt=".gif from Giphy" />
+    </div>
+  </div>
+  {% endfor %}
+{% endif %}
+</div>
+
+<hr>
