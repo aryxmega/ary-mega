@@ -53,6 +53,13 @@
   color: $white;
   font-family: $sans-serif;
   max-width: 520px;
+
+  a {
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    text-decoration: none;
+  }
+
   @media (max-width: $mobile) {
     font-size: 16px;
   }
