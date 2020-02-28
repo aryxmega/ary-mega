@@ -5,8 +5,8 @@
 body {
   font-family: $sans-serif;
   font-size: 16px;
-  color: $white;
-  background-color: $primary-color;
+  color: $dark;
+  background-color: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -110,7 +110,7 @@ img {
   width: 100%;
   height: auto;
   vertical-align: middle;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 40px;
+  //box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 40px;
   margin: 20px auto;
   border-radius: 12px;
 
@@ -126,15 +126,13 @@ img {
 }
 
 a {
-    text-decoration: underline;
-    text-underline-position: under;
-    color: $white;
-    transition: all 500ms;
-    font-weight: 700;
+    text-decoration: none;
+    color: $dark;
+    transition: all 250ms;
+    font-weight: 400;
 
     &:hover {
-        color: $white;
-        text-decoration: line-through;
+        color: $primary-color;
     }
 }
 
