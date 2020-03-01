@@ -1,10 +1,10 @@
 /* Page */
 .page {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin: 20px auto;
+  max-width: 520px;
+
   @media (max-width: $mobile) {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 20px auto;
   }
 }
 
@@ -40,8 +40,14 @@
   p {
     font-size: 20px;
     line-height: 1.6;
-    color: $secondary-color;
+    color: $dark;
     font-family: $sans-serif;
+
+    a {
+      border-bottom: 2px solid $primary-color;
+      padding: 0 0 2px;
+    }
+
     img {
       margin: 0 0 15px;
       box-shadow: 0 10px 20px -4px rgba(30,28,122,0.3);
