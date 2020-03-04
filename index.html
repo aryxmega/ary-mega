@@ -1,58 +1,77 @@
 ---
 layout: default
+overtitle: "👋 I'm Ary:"
+title: I design and code digital products.
+description: This is where I share my life, my work and everything in between.
+featured_image: /images/social.jpg
 ---
-{% comment %}
-<div class="container">
-  <section class="siteheader" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
-    <div class="siteheader__inner">
-      <h1 class="siteheader__title"><a href="{{ site.url }}" title="Home">{{ site.siteheader.title }}</a></h1>
-      <p class="siteheader__slogan">{{ site.siteheader.slogan }}</p>
-    </div>
-  </section>
-</div>
-{% endcomment %}
 
-<div class="container">
+<div class="page-home">
 
-  <img src="{{ "/assets/img/awwwry.png" | relative_url }}" alt="@AWWWRY" />
+	{% if site.data.settings.hero_settings.background_image %}
+	<img src="{{ site.data.settings.hero_settings.background_image | relative_url }}" class="hero__background" draggable="false">
+	{% endif %}
 
-  <!--<h1 class="siteheader__title"><a href="{{ site.url }}" title="Home">{{ site.siteheader.title }}</a></h1>-->
-  
-  <p class="siteheader__slogan">{{ site.siteheader.slogan }}</p>
+	<section class="hero">
+		<div class="wrap grid">
+			<div class="title">
+				<p class="subtitle">{{ page.overtitle }}</p>
+				<h1>{{ page.title }}</h1>
+			</div>
 
-  <article class="page">
+			<p class="intro subtitle--light">
+				{{ page.description }}
+				<a href="https://www.google.com/search?sxsrf=ALeKk00IwGUmQE9Y-hJSstVeLIrysRnptg%3A1583135503972&source=hp&ei=D7tcXv-NOdb3-gSCz4CIBA&q=awwwry&oq=awwwry&gs_l=psy-ab.3..35i39l2j0i10l8.406.1256..1343...1.0..0.159.467.4j1......0....1..gws-wiz.......0i131j0.P6nl9yRwUrA&ved=0ahUKEwi_0d-qp_vnAhXWu54KHYInAEEQ4dUDCAc&uact=5" target="_blank" class="hero__cta button--fill">Find me online</a>
+			</p>
+		</div>
+	</section>
 
-    <div class="page__head">
-      <h1 class="page__title">{{ page.title | escape }}</h1>
-      {% if page.image %}
-      <div class="page-image" style="background-image: url({{site.baseurl}}{{page.image}})"></div>
-      {% endif %}
-    </div>
+	<section class="listing">
+		<div class="wrap">
 
-    <div class="page__content">
-      <p><strong>During business hours</strong>, I'm a digital product designer and front-end developer. I've worked with advertising agencies, automotive businesses, fashion brands, financial institutions and tech startups.</p>
+			{% for project in site.projects reversed %}
 
-      <p><strong>After hours</strong>, I'm either spending time with my adventure partner, bedroom lover and best homie ever, Alexandra, and our son, Arro, or working on various personal projects.</p>
+			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
 
-      <p>If you need to holler, you can <a href='https://www.google.com/search?sxsrf=ALeKk02_Vr4qJOZ-ve2ck16vs8sOS78BZw%3A1582868846505&ei=bqlYXoy-HoPN0PEP_Ym8aA&q=awwwry&oq=awwwry&gs_l=psy-ab.3..35i39l2j0i13l8.10070.10070..10300...1.0..0.113.213.0j2......0....1..gws-wiz.rRcQy6QkaqE&ved=0ahUKEwiMrcn6xfPnAhWDJjQIHf0EDw0Q4dUDCAo&uact=5' target='_blank'>find me all over the internet.</a></p>
-    </div>
+			<article class="project__preview">
+				<h3 class="project__title"><a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">{{ project.title }}</a></h3>
 
-  </article>
+				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
+					{% for image in project.gallery_images %}
+					<a href="{{ project.url | relative_url }}"><img src="{{ '/images/projects/' | relative_url}}{{ image }}" alt="" class="project__image"></a>
+					{% endfor %}
+				</div>
 
-  {% comment %}
-{% if site.posts.size > 0 %}
-  {% for post in site.posts %}
-  <div class="confession" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
-    <div class="confession__content">
-      <div class="confession__meta">
-        <span class="confession__date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
-      </div>
-      <h2 class="confession__title">{{ post.title }}</h2>
-      <img src="{{ post.image }}" alt=".gif from Giphy" />
-    </div>
-  </div>
-  {% endfor %}
-{% endif %}
-{% endcomment %}
+				<div class="project__content grid" style="border-color: {{ accent_color }}">
+					<p class="project__subtitle subtitle--light">{{ project.subtitle }}</p>
+					<p class="project__description --small">
+						{{ project.description }}
+						<a href="{{ project.url | relative_url }}" class="project__link button--text --right"
+							style="color: {{ accent_color }}; --color-var: {{ accent_color }}">View Case Study</a>
+					</p>
+				</div>
+			</article>
 
+			{% endfor %}
+		</div>
+	</section>
+
+	{% include section__about.html %}
+
+	<section class="recent-posts">
+		<div class="wrap grid">
+			<header class="recent-posts__header">
+				<h4>Recent blog posts</h4>
+				<a href="{{ '/blog' | relative_url }}" class="action button--text--accent --right">All Posts</a>
+			</header>
+
+			<div class="recent-posts__list grid">
+				{% for post in site.posts limit: 3 %}
+				{% include component__post-preview.html %}
+				{% endfor %}
+			</div>
+
+			<a href="{{ '/blog' | relative_url }}" class="action-bottom button--text--accent --right">All Posts</a>
+		</div>
+	</section>
 </div>
