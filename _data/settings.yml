@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: "@AWWWRY"
+  site_title: "👋 I'm Ary."
   favicon_image: /images/favicon.png
 
 header_settings:
@@ -16,7 +16,7 @@ menu_settings:
 footer_settings:
   logo_image: 
   logo_width: 100
-  tagline: My life. My Work. And everything in between.
+  tagline: "Read my blog over <a href='https://awwwry.com' target='_blank'>@AWWWRY</a>"
 
 hero_settings:
   background_image: /images/backgrounds/background-hero.svg
