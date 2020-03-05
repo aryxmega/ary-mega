@@ -220,6 +220,10 @@ label {
   font-weight: $footnote-weight;
   line-height: $footnote-lineheight;
   letter-spacing: $footnote-spacing;
+
+  a {
+    border-bottom: 2px solid $accent-color;
+  }
 }
 
 a.footnote {

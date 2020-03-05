@@ -2,9 +2,9 @@
 title: Grid System
 subtitle: A supes-flexible grid template for all of your millenial needs and desires.
 date: 2019-07-24 00:00:00
-description: "#front-end #html #sass"
+description: ""
 featured_image: '/grid-system/desktop.png'
-accent_color: '#2D8EFF'
+accent_color: '#000000'
 gallery_images:
   - /grid-system/desktop.png
   - /grid-system/desktop-mobile.png
