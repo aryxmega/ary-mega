@@ -1,55 +1,37 @@
 ---
 title: Mobile App
-subtitle: Monobrand offers an exclusive range of unique switch programs, carefully selected lighting, a fabulous array of door & furniture hardware.
+subtitle: Monobrand's native mobile app for their blog and e-commerce.
 date: 2020-03-04 00:00:00
-description: Monobrand offers an exclusive range of unique switch programs, carefully selected lighting, a fabulous array of door & furniture hardware.
+description: "#blog #design #ecommerce #mobile-app"
 featured_image: '/mobile-app/mobile-app-01.png'
 accent_color: '#BED7D4'
 gallery_images:
   - /mobile-app/mobile-app-01.png
   - /mobile-app/mobile-app-02.png
+  - /mobile-app/mobile-app-03.png
 ---
 
-Supes Simps Grid Sys (aka SSGS) is a a super simple grid system I whipped up that's mad easy to customize to fit your millennial needs. It currently supports Chrome, Firefox, Safari, Opera, IE and major mobile devices.
+Monobrand offers an exclusive range of unique switch programs, carefully selected lighting, a fabulous array of door & furniture hardware and high end building communication systems.
 {: .lead}
 
-#### Installation is supes eaze:
+> We are big fans of natural materials such as brass, wood, leather, marble, metal, concrete. Many of our products are handmade for you from the finest materials. Our aim is to find for you selected producers create high quality products that will last for years.
 
--   Clone: [https://github.com/awwwry/supes-simps-grids-sys.git](https://github.com/awwwry/supes-simps-grids-sys.git)
--   Download latest .zip file: [https://github.com/awwwry/supes-simps-grids-sys/archive/master.zip](https://github.com/awwwry/supes-simps-grids-sys/archive/master.zip)
+![Monobrand wireframes](/images/projects/mobile-app/mobile-app-wireframes.png)
 
+{% include post-components/gallery.html
+	columns = 2
+	full_width = true
+	images = "/images/projects/mobile-app/mobile-app-ecommerce-01.png,/images/projects/mobile-app/mobile-app-ecommerce-02.png
+	"
+%}
 
-#### Link-up the stylesheet in your <head>
-
-```html
-<link rel="stylesheet" type="text/css" href="style/sheet.css">
-```
-
-#### Structurin' your layouts real nasty.
-```html
-<div class="wrap">
-    <div class="block-3">Content here</div>
-    <div class="block-3">Content here</div>
-    <div class="block-3">Content here</div>
-</div>
-```
-Creating a three-column layout, for example, is supes simps. Wrap the `.block`'s in a `.wrap` class to clear the left floats.
-
-**Note:** this will scale each column down to 100% width on mobile.
-
-#### Gettin' fluid widdit.
-Maybe you want to kick-it old school and create a two-column layout based on percentage. It's mad simps. As long as the `.block-` classes equal 100%, shit'll will be fire 🔥
-```html
-<div class="wrap">
-    <div class="block-75">Some rad content here</div>
-    <div class="block-25">Some informational content here</div>
-</div>
-```
+#### But it all starts with why.
+Monobrand offers an exclusive range of unique switch programs, carefully selected lighting, a fabulous array of door & furniture hardware and high end building communication systems.
 
 {% include post-components/gallery.html
 	columns = 1
 	full_width = true
-	images = "/images/projects/mobile-app/mobile-app-01.png,/images/projects/mobile-app/mobile-app-02.png
+	images = "/images/projects/mobile-app/mobile-app-01.png,/images/projects/mobile-app/mobile-app-02.png,/images/projects/mobile-app/mobile-app-03.png
 	"
 %}
 
