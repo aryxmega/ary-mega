@@ -206,6 +206,7 @@
       line-height: $p-lineheight;
       overflow: auto;
       border-radius: 8px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
 
       @include mq(tabletp) {
         font-size: $p-size;
