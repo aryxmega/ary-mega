@@ -1,38 +1,34 @@
 ---
 layout: default
 ---
-<div class="page-post">
 
-	<header class="post__header header--single">
-		
-		<div class="wrap">
-			<h1 class="post__title">{{ page.title }}</h1>
-			<time class="post__date label">{{ page.date | date: "%B %d, %Y" }}</time>
-		</div>
+{% if site.data.menu %}
+  {% include menu.html %}
+{% else %}
+  {% include back-link.html %}
+{% endif %}
 
-		<img src="{{ page.featured_image | relative_url }}" class="post__featured-image">
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
 
-	</header>
+  {% if page.title != "" %}
+    <h1 class="post-title divided p-name" itemprop="name headline">
+      {{ page.title }}
+    </h1>
+  {% endif %}
 
-	<section class="post-full">
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-		<div class="wrap">
+  <div class="post-meta">
+    {% if page.author %}
+      <div itemprop="author">{{ page.author }}</div>
+    {% endif %}
+    <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+  </div>
 
-			<article class="post__content {% if page.highlight_first %}highlight-first{% endif %}">
-				{{ page.content }}
-			</article>
+  {% if site.disqus.shortname %}
+    {% include disqus-comments.html %}
+  {% endif %}
 
-			<div class="post__more grid">
-				{% if page.previous.url %}
-				<a class="prev-post subtitle" href="{{ page.previous.url | relative_url }}">{{page.previous.title}}</a>
-				{% endif %}
-				{% if page.next.url %}
-				<a class="next-post subtitle" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
-				{% endif %}
-			</div>
-
-		</div>
-
-	</section>
-
-</div>
+</article>
