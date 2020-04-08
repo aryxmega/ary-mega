@@ -188,3 +188,28 @@ table {
     background-color: $gray-white;
   }
 }
+
+
+.w-100 {
+  display: block;
+  width: 100%;
+
+  &::after {
+    clear: both;
+  }
+}
+
+.w-50 {
+  width: 50%;
+  float: left;
+}
+
+@media (max-width: $tablet) {
+
+  .w-50 {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
+}
