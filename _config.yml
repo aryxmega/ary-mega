@@ -1,65 +1,61 @@
-title: 'Ary Mega'
-logo:  # you can add own logo.
-description: American-Indonesian father and fiancé from Los Angeles, California.
-keywords: Ary Mega, American-Indonesian, Product Designer, Front-End Developer, Los Angeles
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://arymega.com" # the base hostname & protocol for your site, e.g. http://example.com
+site: 'Ary.'
 
+url: 
+baseurl: 
 
-# Author Settings
-author:
-  name: 'Ary Mega'
-  job: Ary Mega
-  bio:
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /blog/:slug
+  projects:
+    output: true
+    permalink: /project/:slug
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
-# Comment Section (Disqus)
-disqus-identifier: # add your shortname for Disqus Comment. For example mr-brown
-
-
-# Google Analytics
-google-analytics: # add your identifier. For example UA-99631805-1.
-
-
-# Build settings
 markdown: kramdown
-permalink: pretty
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+  
+sass:
+  style: compressed
+
 plugins:
   - jekyll-sitemap
-  - jekyll/tagging
 
-# Pages Path
-defaults:
-  - scope:
-      path: '_pages'
-    values:
-      permalink: /:basename:output_ext
-
-include:
-  - _pages
-
-# Tags
-tag_page_dir:         tag
-tag_page_layout:      tag-page
-tag_permalink_style:  pretty
-
-sass:
-  sass_dir: _sass
-  style: compressed
-  sourcemap: never
-
-
-# Exclude from processing.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - vendor
-
-compress_html:
-  clippings: all
-  comments: [""]
-  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
-  profile: false
-  blanklines: false
-  ignore:
-    envs: []
+paginate: 7
+paginate_path: "/blog/page-:num/"
