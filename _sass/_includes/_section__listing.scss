@@ -21,9 +21,11 @@
     margin-bottom: 32px;
 
     a {
+      
+      color: $accent-color;
 
       &:hover {
-        color: var(--accent);
+        color: $text-dark-color;
       }
     }
   }

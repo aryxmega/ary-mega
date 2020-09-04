@@ -12,9 +12,9 @@
 		</a>
 		{% endif %}
 
-		<!--<div class="menu__toggle js-menu-toggle">
+		<div class="menu__toggle js-menu-toggle">
 			<div class="menu__toggle__icon"><span></span></div>
-		</div>-->
+		</div>
 
 		<nav class="header__menu">
 			<div class="menu__wrap">
@@ -31,7 +31,7 @@
 			</div>
 		</nav>
 
-		<a href="project/married" title="Married in Joshua Tree" target="_blank" class="header__cta button--fill">August 28, 2020</a>
+		<a href="{{ item.url | relative_url }}/project/married" title="Married in Joshua Tree" target="_blank" class="header__cta button--fill">August 28, 2020</a>
 	</div>
 
 </header>

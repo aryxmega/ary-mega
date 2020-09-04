@@ -18,11 +18,6 @@ featured_image:
 				<p class="subtitle">{{ page.overtitle }}</p>
 				<h1>{{ page.title }}</h1>
 			</div>
-
-			<p class="intro subtitle--light">
-				{{ page.description }}
-				<a href="project/married" title="Married in Joshua Tree" target="_blank" class="hero__cta button--fill">August 28, 2020</a>
-			</p>
 		</div>
 	</section>
 
@@ -34,7 +29,7 @@ featured_image:
 			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
 
 			<article class="project__preview">
-				<!--<h3 class="project__title"><a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">{{ project.title }}</a></h3>-->
+				<h3 class="project__title"><a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">{{ project.title }}</a></h3>
 
 				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
 					{% for image in project.gallery_images %}
