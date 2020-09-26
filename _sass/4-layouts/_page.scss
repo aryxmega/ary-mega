@@ -47,6 +47,22 @@
       border: 20px solid $gray-white;
       width: 100%;
     }
+
+    label {
+      font-size: 16px;
+      color: white;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   ul li,
   ol li {

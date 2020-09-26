@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="background"></div>
+
+<div id="intro" class="container">
+  <article class="page">
+
+    <div class="page__content" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-delay="100" data-aos-duration="700">
+        <h1>
+            If you'd like to join or have questions, holler your first name and email and we'll get back to you within 24 hours.
+        </h1>
+
+        <form name="invites" method="POST" data-netlify="true" action="/hollered/">
+            <p>
+                <label>
+                    Your first name:<br>
+                    <input type="text" name="name" />
+                </label>   
+            </p>
+            <p>
+                <label>
+                    Your email:<br>
+                    <input type="email" name="email" />
+                </label>
+            </p>
+            <p>
+                <button type="submit">Holler</button>
+            </p>
+        </form>
+            
+
+    </div>
+
+  </article>
+</div>
