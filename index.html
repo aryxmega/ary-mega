@@ -1,72 +1,51 @@
 ---
 layout: default
-overtitle: /aw·ree/
-title: American-Indonesian Father & Husband
-description: Was Sr. UX <a href='https://www.fabletics.com'>@Fabletics</a>. Owned <a href='https://www.instagram.com/cvmpus'>@CVMPUS</a>. Currently WFH <a href='https://awwwry.com'>@COVID19</a>.
-featured_image: 
 ---
 
-<div class="page-home">
+<div class="container">
+  <section class="siteheader" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="700">
+    <div class="siteheader__inner">
+      <h1 class="siteheader__title"><a href="{{ site.url }}" title="Home">{{ site.siteheader.title }}</a></h1>
+      <p class="siteheader__slogan">{{ site.siteheader.slogan }}</p>
+      <div class="siteheader__more">
+        <form name="Confessions" action="/confessed/" method="POST" data-netlify="true">
+          <p>
+            <input type="text" name="confession" placeholder="Make your own reports, Susan 🤬" />
+          </p>
+          <p>
+            <button type="submit" class="button-confess">Confess</button>
+          </p>
+        </form>
+      </div> 
+    </div>
+  </section>
 
-	{% if site.data.settings.hero_settings.background_image %}
-	<img src="{{ site.data.settings.hero_settings.background_image | relative_url }}" class="hero__background" draggable="false">
-	{% endif %}
-
-	<section class="hero">
-		<div class="wrap grid">
-			<div class="title">
-				<p class="subtitle">{{ page.overtitle }}</p>
-				<h1>{{ page.title }}</h1>
-			</div>
-		</div>
-	</section>
-
-	<section class="listing">
-		<div class="wrap">
-
-			{% for project in site.projects reversed %}
-
-			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
-
-			<article class="project__preview">
-				<h3 class="project__title"><a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">{{ project.title }}</a></h3>
-
-				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
-					{% for image in project.gallery_images %}
-					<a href="{{ project.url | relative_url }}"><img src="{{ '/images/projects/' | relative_url}}{{ image }}" alt="" class="project__image"></a>
-					{% endfor %}
-				</div>
-
-				<!--<div class="project__content grid" style="border-color: {{ accent_color }}">
-					<p class="project__subtitle subtitle--light">{{ project.subtitle }}</p>
-					<p class="project__description --small">
-						{{ project.description }}
-						<a href="{{ project.url | relative_url }}" class="project__link button--text --right"
-							style="color: {{ accent_color }}; --color-var: {{ accent_color }}">View Case Study</a>
-					</p>
-				</div>-->
-			</article>
-
-			{% endfor %}
-		</div>
-	</section>
-
-	<!--{% include section__about.html %}-->
-
-	<!--<section class="recent-posts">
-		<div class="wrap grid">
-			<header class="recent-posts__header">
-				<h4>Recent blog posts</h4>
-				<a href="{{ '/blog' | relative_url }}" class="action button--text--accent --right">All Posts</a>
-			</header>
-
-			<div class="recent-posts__list grid">
-				{% for post in site.posts limit: 3 %}
-				{% include component__post-preview.html %}
-				{% endfor %}
-			</div>
-
-			<a href="{{ '/blog' | relative_url }}" class="action-bottom button--text--accent --right">All Posts</a>
-		</div>
-	</section>-->
 </div>
+
+<div class="container">
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+    <div class="confession" data-aos="fade-up" data-aos-easing="ease-out-quad" data-aos-duration="800">
+      <div class="confession__content">
+        <div class="confession__meta">
+          <span class="confession__date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
+        </div>
+        <h2 class="confession__title">{{ post.title }}</h2>
+        <img src="{{ post.image }}" alt=".gif from Giphy" />
+      </div>
+    </div>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<div class="container">
+  <div class="footer__news">
+    <h2><span>News</span></h2>
+    <p class="siteheader__notes">Use <a href="https://giphy.com/" title="https://giphy.com/" target="_blank">.GIFs</a> with your confessions, available in the next code deployment.</p>
+  </div>
+  <img src="https://media.giphy.com/media/12XMGIWtrHBl5e/giphy.gif" alt="Giphy of Michael Scott" />
+  <img src="https://media.giphy.com/media/5wWf7GR2nhgamhRnEuA/giphy.gif" alt="Giphy of Dwight Shrute" />
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="The Office dance" />
+</div>
+
+<hr>
