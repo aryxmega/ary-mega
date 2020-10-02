@@ -1,0 +1,85 @@
+/* confession */
+.confession {
+  display: flex;
+  margin-bottom: 60px;
+  img {
+    margin-top: 32px;
+    margin-bottom: 0px;
+  }
+}
+
+.confession__content {
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 40px;
+  padding: 32px;
+  margin: 0 auto;
+  width: 80%;
+  background-color: $white;
+}
+
+.confession__image-box {
+  display: table;
+  margin-right: 30px;
+  margin-top: 15px;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.confession__image {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $gray-white;
+  box-shadow: 0 10px 20px -4px rgba(30,28,122,0.3);
+  border-radius: 4px;
+}
+
+.confession__title {
+  margin: 32px 0 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  transition: color 250ms;
+  color: $gray;
+  font-family: $sans-serif;
+}
+
+.confession__date {
+  font-family: $sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: $blue-medium;
+}
+
+.confession__location {
+  font-family: $monospace;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $gray;
+  letter-spacing: 1.2px;
+}
+
+.confession__excerpt {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 27px;
+  color: $gray;
+}
+
+.read-more {
+  font-family: $sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+  text-decoration: underline;
+  text-underline-position: under;
+  color: $primary-color;
+}
