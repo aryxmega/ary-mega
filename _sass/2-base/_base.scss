@@ -6,7 +6,7 @@ body {
   font-family: $sans-serif;
   font-size: 16px;
   color: $white;
-  background-color: $blue-light;
+  background-color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   input, textarea {
@@ -124,10 +124,10 @@ a {
     text-underline-position: under;
     color: $primary-color;
     transition: color 200ms;
-    font-weight: 700;
+    font-weight: 400;
 
     &:hover {
-        color: $dark;
+        color: $white;
     }
 }
 

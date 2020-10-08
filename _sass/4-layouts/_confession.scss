@@ -11,10 +11,9 @@
 .confession__content {
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 40px;
-  padding: 32px;
+  padding: 32p 0x;
   margin: 0 auto;
-  width: 80%;
-  background-color: $white;
+  width: 88%;
 }
 
 .confession__image-box {
@@ -49,13 +48,13 @@
 }
 
 .confession__date {
-  font-family: $sans-serif;
+  font-family: $monospace;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: $blue-medium;
+  color: $gray;
 }
 
 .confession__location {
