@@ -1,7 +1,7 @@
 // *****************
 // Color Variables
 // *****************
-$primary-color: #222222;
+$primary-color: rgb(253, 82, 156);
 $secondary-color: #222222;
 $dark: #222222;
 $light: #6c757d;
@@ -13,11 +13,11 @@ $gray-lighten: #c7d0e2;
 $blue-light: rgba(32, 57, 204, .04);
 $blue-medium: #222222;
 $blue-dark: #080E33;
-$white: #FFFDFA;
-$black: #000;
+$white: #ffffff;
+$black: #000000;
 
 // *****************
 // Font Variables
 // *****************
 $monospace: 'IBM Plex Mono', 'Space Mono', monospace;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$sans-serif: 'Lora', serif;
